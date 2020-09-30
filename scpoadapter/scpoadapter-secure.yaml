@@ -1,0 +1,31 @@
+mbJmsComponent:
+  queue:
+    password-secure: admin
+      
+scpo:
+  intermediateQueue:
+    password-secure: admin
+  db:
+    oracle:
+      password-secure: SCPOMGR
+  ms:
+    server:
+      requester:
+        https:
+          key:
+            password-secure: "changeme"
+          tls:
+            keyStore:
+              password-secure: "changeme"
+            trustStore:
+              password-secure: "changeme"    
+      
+      
+bulk:
+  callback:
+    password-secure:
+    azure:
+      container:
+        name:
+      connection:
+        string-secure:  

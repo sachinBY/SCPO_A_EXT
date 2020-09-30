@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sequence-configuration>
+<table name="CUSTORDER">
+	<column name="ORDERSEQNUM" sequence="CUSTORDERSEQ" />
+</table>
+<table name="PURCHORDER">
+	<column name="ORDERSEQNUM" sequence="PURCHORDERSEQ" />
+</table>
+<table name="DDEPROFILE">
+	<column name="DDEPROFILEID" sequence="DDEPROFILEENTRYSEQ" />
+</table>
+<table name="SKUEXTERNALFCST">
+	<column name="ORDERSEQNUM" sequence="SKUEXTERNALFCSTSEQ" />
+</table>
+</sequence-configuration>

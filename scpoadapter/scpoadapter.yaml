@@ -1,0 +1,452 @@
+##########################################################
+#
+#         API endpoints   
+#
+##########################################################
+api:
+  base: jda-scpo-adapter-api/v1
+  name: jda-scpo-adapter-api
+  version: 1.0.0
+  https:
+    port: "9092"
+  autodiscovery:
+    id: "xxxx"
+    
+##########################################################
+#
+#         JMS configuration   
+#
+##########################################################
+mbJmsComponent:
+  queue:
+    brokerURL: tcp://localhost:61616
+    user: admin
+    maxConnections: "5"
+    concurrentConsumers: "3"
+    initialRedeliveryDelay: "20000"
+    redeliveryDelay: "20000"
+    sessionCacheSize: "100"
+    maxRedelivery: "0"
+
+jms:
+  queue:
+    mb:
+      out: MB-SCPO
+      in: SCPO-MB
+      error: SCPO-DLQMB
+    scpo:
+      ack: ACK-SCPO  
+  outbound:
+    endpoint:
+      type: queue
+      
+scpo:
+  intermediateQueue:
+    enable: "true"
+    brokerURL: tcp://localhost:61616
+    user: admin
+    maxConnections: "5"
+    concurrentConsumers: "3"
+    initialRedeliveryDelay: "20000"
+    redeliveryDelay: "20000"
+    sessionCacheSize: "100"
+    maxRedelivery: "0"
+    toLiveTable: to-live-table
+    toLiveAckMode: "AUTO"
+    toStagingTable: to-staging-table
+    toStagingAckMode: "AUTO"
+    
+##########################################################
+#
+#         database configuration   
+#
+##########################################################
+  db:
+    type: ""
+    blockSize: "100"
+    batchCommitSize: "1000"
+    batchExecuteMaxRetrial: "3"
+    maxAllowedErrorsInBatch: "10"
+    error:
+      tables:
+        enable: "false"
+    continuous:
+      errors:
+        msg: "Continuous Errors in the batch"
+    oracle:
+      host: md1npdlnxdb08.dev.corp.local
+      port: "1521"
+      instance: sca18pd
+      user: SCPOMGR
+      max:
+        idle:
+          time:
+            secs: "600"
+      pooling:
+        checkoutTimeout: "60000"
+        maxIdleTime: "60000"
+        idleConnectionTestPeriod: "60000"
+        maxPoolSize: "50"
+        minPoolSize: "20"
+        incBy: "10"
+        stmtCacheSize: "10"
+    truncateTable:
+      inventory: "false"
+      planpurch: "false"
+      bom: "false"
+      altbom: "false"
+      vehicleload: "false"
+      vehcileloadline: "false"
+      purchmethod: "false"
+      relation: "false"
+      custorder: "false"
+      custorderheader: "false"
+      res: "false"
+    soft-delete:
+      flag: "false"
+      udc:
+        name: "IS_DELETE"                    
+  automatic-feed:
+    enable:  "false"
+  aggregate:
+    period:  "weekly"
+    
+##########################################################
+#
+#         messagestore configuration   
+#
+##########################################################                
+  serviceName: "SCPO-GLOBAL"
+  serviceType: "ADAPTER"
+  serviceInstance: "SCPO-CLUSTER"
+  serviceNamedVersion: "SCPO-2020.1.0"
+  ms:
+    enabled: "true"
+    server:
+      requester:
+        config: "HTTPS_MS_Request_Configuration"
+        #config: "HTTP_MS_Request_Configuration"
+        base:
+          path: "/messagestore/api/v3"
+        storeclientid: "client_id"
+        storeclientsecret: "client_secret"
+        max:
+          connections: "2"
+        connection:
+          idle:
+            timeout: "1200000"
+        response:
+          buffer:
+            size: "1024"
+        http:
+          host: "localhost"
+          port: "9831"
+        https:
+          host: "localhost"
+          port: "9830"
+          tls:
+            keyStore:
+              path: "keystore.jks"
+            trustStore:
+              path: "truststore.jks"
+
+##########################################################
+#
+#         Error notification configuration   
+#
+##########################################################
+  error:
+    notification:
+      enabled: "false"
+      type: "smtp" #type could be smtp or cloudhub
+  cloudhub:
+    host: "anypoint.mulesoft.com"
+    port: "443"
+    user: "<scpo.cloudhub.user>"
+    password: "<scpo.cloudhub.password>"
+    environment: "Sandbox"
+  smtp:
+    host: "<smtp host details>"
+    port: "<smtp post>"
+    user: "<smtp user>"
+    password: "<smtp password>"
+    toAddress: "<email>"
+    fromAddress: "<email>"         
+
+##########################################################
+#
+#         Archiving and Error Reports configuration   
+#
+##########################################################
+file:
+  archive:
+    enabled: "true"
+inbound:
+  archive:
+    path: C:/scpo-2020.2.0/messageArchive/inbound
+outbound:
+  archive:
+    path: C:/scpo-2020.2.0/messageArchive/outbound
+eframework:
+  applicationId: jda-scpo-adapter
+  errorReport:
+    enabled: "true"
+    errorReportPath: C:/scpo-2020.2.0/errorReports
+    title: SCPO Adapter
+    htmlTemplatePath: errorReportTemplate.html
+    payload:
+      transaction:
+        size: 2048
+logger:
+  category: "com.jda.jci"
+  nullable: "true"
+  payload:
+    length: "10" #length in kbs
+  advance:
+    enabled: "true"        
+            
+##########################################################
+#
+#         UDC related configuration   
+#
+##########################################################
+entitylist:
+  mapping:
+    location: /scpoa_config/entityMap.xml        
+
+
+gs1:
+  sbdh:
+##########################################################
+#
+#         GS1 and flow specific configuration   
+#
+##########################################################
+    headerversion: "1.0"
+    sender: SCPO.GLOBAL
+    receiver: HOST.GLOBAL
+    fcst:
+      receiver: 
+    dfutoskufcst:
+      receiver: 
+    planarriv:
+      receiver: 
+    planorder:
+      receiver: 
+    planpurch:
+      receiver: 
+    recship:
+      receiver: 
+    vehicleloadline:
+      receiver: 
+    skuhist:
+      receiver: 
+    typeversion: "3.2"
+    release: 2018.1.0
+    message: "GS1"
+    default: "true"
+    scope:
+      identifier: GS1_JDA 2020.2.0
+      skuhistidentifier: GS1_JDA 2020.2.0
+      dfutoskufcstidentifier: GS1_JDA 2020.2.0
+  xsd:
+    root: GS1/3.2.0
+  jda:
+    xsd:
+      root: GS1_JDA/2019.1.1
+  enable:
+    validation: "true"      
+  message:
+    size: "100"
+    plannedSupply:
+      version: plannedSupplyMessage
+    fcst:
+      version: forecastMessage          
+  network:
+    default:
+      transmode: " "
+      uom: "EA"
+      sourceuom: "EA"
+      targetuom: "EA"
+  automatic:
+    uomconversion: "false"
+  dmdunit:
+    process:
+      ancestory: "false"
+  fcst:
+    in:
+      table: "skuexternalfcst"
+    message: "forecastMessage"
+    messageType: "forecast2"
+    out:
+      message: "csv"    
+  dfutoskufcst:
+    message: "forecast2Message"
+    messageType: "forecast2"    
+    out:
+      message: "gs1"
+  skuhist:
+    message: "demandHistory"
+    out:
+      message: "gs1"  
+  customize:
+    billofmaterial: "false"
+    calendar: "false"
+    cust: "false"
+    custorder: "false"
+    dmdgroup: "false"
+    dmdunit: "false"
+    ihlm: "false"
+    dfuview: "false"
+    dfutoskufcst: "false"   
+    dfuprice: "false"
+    hist: "false"
+    histtransactual: "false"
+    inventory: "false"
+    item: "false"
+    loc: "false"
+    movingevent: "false"
+    network: "false"
+    purchorder: "false"
+    firmplanpurch: "false"
+    prepacksupply: "false"
+    productionmethod: "false"
+    promotion: "false"
+    purchmethod: "false"
+    resource: "false"
+    schedrcpts: "false"
+    sku: "false"
+    skudemandparam: "false"
+    skuexternalfcst: "false"
+    skuexternalfcst2: "false"
+    sourcing: "false"
+    uom: "false"
+    skuhist: "false"
+    fcsthist: "false"
+    relation: "false"
+    in:
+      vehicleloadline: "false"
+      planarriv: "false"
+    fcst: "false"
+    planarriv: "false"
+    planorder: "false"
+    planpurch: "false"
+    recship: "false"
+    out:
+      vehicleloadline: "false"
+    
+##########################################################
+#
+#         bulk update properties   
+#
+##########################################################
+item:
+  bulkUpdate:
+    disabled: "false"
+loc:
+  bulkUpdate:
+    disabled: "false"
+sku:
+  bulkUpdate:
+    disabled: "false"
+purchorder:
+  bulkUpdate:
+    disabled: "false"
+inventory:
+  bulkUpdate:
+    disabled: "false"
+dmdunit:
+  bulkUpdate:
+    disabled: "false"
+dmdgroup:
+  bulkUpdate:
+    disabled: "false"
+dfuview:
+  bulkUpdate:
+    disabled: "false"
+cust:
+  bulkUpdate:
+    disabled: "false"
+schedrcpts:
+  bulkUpdate:
+    disabled: "false"
+dfuprice:
+  bulkUpdate:
+    disabled: "false"
+movingevent:
+  bulkUpdate:
+    disabled: "false"
+vehicleloadline:
+  bulkUpdate:
+    disabled: "false"
+planpurch:
+  bulkUpdate:
+    disabled: "false"
+custorder:
+  bulkUpdate:
+    disabled: "false"
+bom:
+  bulkUpdate:
+    disabled: "false"
+purchmethod:
+  bulkUpdate:
+    disabled: "false"
+productionmethod:
+  bulkUpdate:
+    disabled: "false"
+network:
+  bulkUpdate:
+    disabled: "false"
+cal:
+  bulkUpdate:
+    disabled: "false"                                                                            
+
+##########################################################
+#
+#         Acknowledgement configuration   
+#
+##########################################################
+ack:
+  received:
+    enabled: "false"
+  processed:
+    enabled: "false"
+  error:
+    enabled: "false"                                                
+    
+##########################################################
+#
+#         bulk notification configuration   
+#
+##########################################################
+bulk:
+  notification:
+    enabled: "true"
+    canonicalmodel: "GS1"
+  serviceName: "SCPO-GLOBAL"
+  serviceType: "SCPO"
+  serviceInstance: "SCPO-DALLAS"
+  serviceNamedVersion: "SCPO-2020.1.0"
+  csv:
+    batch:
+      size: 100000
+    schema:
+      location:
+  read:
+    batch:
+      size: "100"    
+  persistent:
+    service:
+    store:
+      host:
+      type: "Local File Store"
+      path: "//MD1NPDVJCE01.dev.corp.local/Tools/u/SCPO"
+  callback:
+    protocol: "FILE"
+    ingestion:
+      host: "localhost"
+      port: "9870"
+      resource:
+        path: "/ing/api/v1/callback"
+    username:
+    path:
