@@ -279,7 +279,7 @@ gs1:
     message: "forecastMessage"
     messageType: "forecast2"
     out:
-      message: "csv"    
+      message: "gs1"    
   dfutoskufcst:
     message: "forecast2Message"
     messageType: "forecast2"    
