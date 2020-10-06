@@ -950,4 +950,18 @@
     		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
     	</table> -->
     </entity-map>
+    <entity-map scpoEntityName="generic" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="aggres" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="crtDtTime" dataType="datetime"/>
+    		<column hostColumnName="itemLocationId.item.primaryId" scpoColumnName="item" isPK="true"/>
+    		<column hostColumnName="itemLocationId.location.primaryId" scpoColumnName="loc" isPK="true"/>
+    		<column hostColumnName="effectiveDate" scpoColumnName="effDt" dataType="date"/>
+    	</table>
+    	<table name="aggsku" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="crtDtTime" dataType="datetime"/>
+    		<column hostColumnName="itemLocationId.item.primaryId" scpoColumnName="item"/>
+    		<column hostColumnName="itemLocationId.location.primaryId" scpoColumnName="loc"/>
+    		<column hostColumnName="onHandInventoryQuantity" scpoColumnName="ohqty" dataType="number"/>
+    	</table> -->
+    </entity-map>
 </entity-map-configuration>

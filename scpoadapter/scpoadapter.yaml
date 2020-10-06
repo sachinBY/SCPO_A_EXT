@@ -244,7 +244,6 @@ gs1:
     typeversion: "3.2"
     release: 2018.1.0
     message: "GS1"
-    default: "true"
     scope:
       identifier: GS1_JDA 2020.2.0
       skuhistidentifier: GS1_JDA 2020.2.0
@@ -272,23 +271,25 @@ gs1:
     uomconversion: "false"
   dmdunit:
     process:
-      ancestory: "false"
+      ancestory: "false"    
   fcst:
     in:
-      table: "skuexternalfcst"
-    message: "forecastMessage"
+      table: "skuexternalfcst"    
+    message: "forecast2Message"
     messageType: "forecast2"
     out:
-      message: "csv"    
+      message: "gs1"    
   dfutoskufcst:
-    message: "forecast2Message"
-    messageType: "forecast2"    
+    message: "forecast2"    
     out:
       message: "gs1"
+  inventory:
+    aggregation:
+      categories: "AVAILABLE_FOR_SALE"    
   skuhist:
     message: "demandHistory"
     out:
-      message: "gs1"  
+      message: "gs1"
   customize:
     billofmaterial: "false"
     calendar: "false"
@@ -334,7 +335,92 @@ gs1:
     recship: "false"
     out:
       vehicleloadline: "false"
-    
+
+##########################################################
+#
+#         live tables for the workflows(can be used for UDTs)   
+#
+##########################################################
+  load:
+    livetable:
+      purchorder: "PURCHORDER"
+      item:
+        item: "ITEM"
+        dmdunit: "DMDUNIT"
+      uomcategoryconvfactor: "UOMCATEGORYCONVFACTOR"
+      dmdunit: "DMDUNIT"
+      loc: "LOC"
+      inventory: "INVENTORY"
+      sku: "SKU"
+      skudeploymentparam: "SKUDEPLOYMENTPARAM"
+      skudemandparam: "SKUDEMANDPARAM"
+      skueffinventoryparam: "SKUEFFINVENTORYPARAM"
+      skueffioparam: "SKUEFFIOPARAM"
+      skuioparam: "SKUIOPARAM"
+      skuperishableparam: "SKUPERISHABLEPARAM"
+      skuplanningparam: "SKUPLANNINGPARAM"
+      skusafetystockparam: "SKUSAFETYSTOCKPARAM"
+      sspresentation: "SSPRESENTATION"
+      ss: "SS"
+      storagerequirement: "STORAGEREQUIREMENT"
+      ihlm_dmdunit: "DMDUNIT"
+      dmdgroup: "DMDGROUP"
+      dfu: "DFUVIEW"
+      dfutosku: "DFUTOSKU"
+      hist: "HIST"
+      cust: "CUST"
+      schedrcpts: "SCHEDRCPTS"
+      schedrcptsdetail: "SCHEDRCPTSDETAIL"
+      dfubaseprice: "DFUBASEPRICE"
+      dfueffprice: "DFUEFFPRICE"
+      movingevent: "MOVINGEVENT"
+      movingeventdata: "MOVINGEVENTDATA"
+      vehicleload: "VEHICLELOAD"
+      vehicleloadline: "VEHICLELOADLINE"
+      planpurch: "PLANPURCH"
+      planarriv: "PLANARRIV"  
+      productionmethod: "PRODUCTIONMETHOD"
+      productionstep: "PRODUCTIONSTEP"
+      altproductionstep: "ALTPRODUCTIONSTEP"
+      custorder: "CUSTORDER"
+      custorderheader: "CUSTORDERHEADER"
+      histtransactual: "HISTTRANSACTUAL"
+      histtransplan: "HISTTRANSPLAN"
+      bom: "BOM"
+      altbom: "ALTBOM"
+      purchmethod: "PURCHMETHOD"
+      network:
+        network: "NETWORK" 
+        networkcap: "NETWORKCAP"
+        sourcing: "SOURCING"
+        sourcingrequirement: "SOURCINGREQUIREMENT"
+        sourcinguomconvfactor: "SOURCINGUOMCONVFACTOR"
+      res:
+        res: "RES"
+        cal: "CAL"
+        calpattern: "CALPATTERN"
+        calattribute: "CALATTRIBUTE"
+      cal: "CAL"
+      calpattern: "CALPATTERN"
+      calattribute: "CALATTRIBUTE"
+      ddeprofile: "DDEPROFILE"
+      dfuddemap: "DFUDDEMAP"
+      uom: "UOM"
+      uomcategory: "UOMCATEGORY"
+      fcst: "FCST"
+      skuexternalfcst: "SKUEXTERNALFCST"
+      dfumaintcopydfu: "DFUMAINTCOPYDFU"
+      supersession: "SUPERSESSION"
+      allocprepacksupply: "ALLOCSUPPLYPREPACK"
+      allocsupplyprepackdetails: "ALLOCSUPPLYPREPACKDETAILS"
+      skudmdgroupparam: "SKUDMDGROUPPARAM"
+      skudmdgroupeffparam: "SKUDMDGROUPEFFPARAM"
+      skuhistfcst: "SKUHISTFCST"
+      sourcing: "SOURCING"
+      sourcingrequirement: "SOURCINGREQUIREMENT"
+      sourcinguomconvfactor: "SOURCINGUOMCONVFACTOR"
+      
+                  
 ##########################################################
 #
 #         bulk update properties   
@@ -412,7 +498,9 @@ ack:
   processed:
     enabled: "false"
   error:
-    enabled: "false"                                                
+    enabled: "false"
+  sent:
+    enabled: "false"                                                  
     
 ##########################################################
 #
@@ -422,7 +510,6 @@ ack:
 bulk:
   notification:
     enabled: "true"
-    canonicalmodel: "GS1"
   serviceName: "SCPO-GLOBAL"
   serviceType: "SCPO"
   serviceInstance: "SCPO-DALLAS"
@@ -440,7 +527,7 @@ bulk:
     store:
       host:
       type: "Local File Store"
-      path: "//MD1NPDVJCE01.dev.corp.local/Tools/u/SCPO"
+      path: "//IN2-1026937LT/u/SCPO"
   callback:
     protocol: "FILE"
     ingestion:
@@ -450,3 +537,35 @@ bulk:
         path: "/ing/api/v1/callback"
     username:
     path:
+
+##########################################################
+#
+#         canmodel service configuration   
+#
+##########################################################
+canmodel:
+  #use GS1Configuration_CANMODEL_SERVICE to use canmodel as a service. 
+  #use GS1_Config_LOCAL_FILE_CONFIG to use local file canmodel 
+  type: "GS1_Config_LOCAL_FILE_CONFIG"
+  #use GS1_JDA 2020.1.0.1 for sainsbury
+  version: "GS1_JDA 2020.2.0"
+  service:
+    config: "HTTP_Canmodel_Request_configuration"
+    #config: "HTTPS_Canmodel_Request_configuration"
+    connection:
+      idle:
+        timeout: "30000"
+    max:
+      connections: "-1"
+    http:
+      #host: "azenpdconap003.dev.corp.local"
+      host: "localhost"
+      port: "9861"
+    https:
+      host: "localhost"
+      port: "9860"
+      tls:
+        keystore:
+          path: "keystore.jks"
+        truststore:
+          path: "truststore.jks"
