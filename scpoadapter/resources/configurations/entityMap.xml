@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+    ==========================================================================
+                         Copyright 2018, JDA Software Group, Inc.
+                                   All Rights Reserved
+
+                      THIS IS UNPUBLISHED PROPRIETARY SOURCE CODE OF
+                                 JDA SOFTWARE GROUP, INC.
+
+
+                  The copyright notice above does not evidence any actual
+                       or intended publication of such source code.
+
+     ==========================================================================
+
+-->
+
+<entity-map-configuration>
+<entity-map scpoEntityName="billofmaterial" bi-directional="true">
+    	<!-- <table name="bom">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="billOfMaterialIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="componentItem/additionalTradeItemIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="effectiveDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap5" scpoColumnName="udc9"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc10"/>
+    	</table>
+    	<table name="altbom">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="billOfMaterialIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="componentItem/additionalTradeItemIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="effectiveDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap5" scpoColumnName="udc9"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc10"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="billOfMaterialIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="componentItem/additionalTradeItemIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="effectiveDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap5" scpoColumnName="udc9"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc10"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="cal" bi-directional="true">
+    	<!-- <table name="cal">
+    		<column hostColumnName="description" scpoColumnName="udc1"/>
+    		<column hostColumnName="calendarStartDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="calpattern">
+    		<column hostColumnName="description" scpoColumnName="udc1"/>
+    		<column hostColumnName="calendarStartDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    		<column hostColumnName="name" scpoColumnName="udc5"/>
+    		<column hostColumnName="patternFrequency/everyOrdinalDay" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc8" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc9"/>
+    	</table>
+    	<table name="calattribute">
+    		<column hostColumnName="description" scpoColumnName="udc1"/>
+    		<column hostColumnName="calendarStartDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    		<column hostColumnName="name" scpoColumnName="udc5"/>
+    		<column hostColumnName="patternFrequency/everyOrdinalDay" scpoColumnName="udc6"/>
+    		<column hostColumnName="attributeType" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc8" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc9"/>
+    	</table>
+    	<table name="UDT_CAL" isUDT="true">
+    		<column hostColumnName="description" scpoColumnName="udc1"/>
+    		<column hostColumnName="calendarStartDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    		<column hostColumnName="name" scpoColumnName="udc5"/>
+    		<column hostColumnName="patternFrequency/everyOrdinalDay" scpoColumnName="udc6"/>
+    		<column hostColumnName="attributeType" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc8" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc9"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="cust" bi-directional="true">
+    	<!-- <table name="cust">
+    		<column hostColumnName="basicParty/partyName" scpoColumnName="udc1"/>
+    		<column hostColumnName="basicParty/partyAddress/city" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="UDT_CUST" isUDT="true">
+    		<column hostColumnName="basicParty/partyName" scpoColumnName="udc1"/>
+    		<column hostColumnName="basicParty/partyAddress/city" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="relation">
+    	<!-- <table name="dfumaintcopydfu">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandChannelIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="UDC1"/>
+    		<column hostColumnName="sap2" scpoColumnName="UDC2"/>
+    	</table> -->
+    	<!-- <table name="supersession">
+    		<column hostColumnName="sap6" scpoColumnName="UDC1"/>
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandChannelIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table> -->
+    <!-- <table name="UDT_RELATION" isUDT="true">
+    		<column hostColumnName="sap6" scpoColumnName="UDC1"/>
+    		<column hostColumnName="basicParty/partyAddress/city" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="UDC1"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="custorder" bi-directional="true">
+    	<!-- <table name="custorder">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="orderIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="lineItemNumber" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    		<column hostColumnName="orderLineItemDetail/orderLogisticalInformation/shipFrom/additionalPartyIdentification" scpoColumnName="udc9"/>
+    	</table>
+    	<table name="custorderheader">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="orderIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="UDT_CUSTORDER" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="orderIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="lineItemNumber" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    		<column hostColumnName="orderLineItemDetail/orderLogisticalInformation/shipFrom/additionalPartyIdentification" scpoColumnName="udc9"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="dfuprice" bi-directional="true">
+    	<!-- <table name="dfubaseprice">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="demandChannel" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"  dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="dfueffprice">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="demandChannel" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"  dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="UDT_DFUPRICE" isUDT="true">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="demandChannel" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"  dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="dmdgroup" bi-directional="true">
+    	<!-- <table name="dmdgroup">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandChannelIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="UDT_DMDGROUP" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandChannelIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="dmdunit" bi-directional="true">
+    	<!-- <table name="dmdunit">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandUnitIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_DMDUNIT" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandUnitIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="hist" bi-directional="true">
+    	<!-- <table name="hist">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="demandChannel" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="UDT_HIST" isUDT="true">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="demandChannel" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+	<entity-map scpoEntityName="histtransactual" bi-directional="true">
+    <!-- <table name="histtransactual">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="actualExecutionDateTime" scpoColumnName="udc2" dataType="datetime"/>
+    		<column hostColumnName="actualDeliveryDateTime" scpoColumnName="udc3" dataType="datetime"/>
+    		<column hostColumnName="actualQuantity" scpoColumnName="udc4" dataType="float"/>
+    		<column hostColumnName="deliveryMethodCode" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap7" scpoColumnName="udc7"/>
+    	</table>
+    	<table name="histtransplan">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="actualExecutionDateTime" scpoColumnName="udc2" dataType="datetime"/>
+    		<column hostColumnName="actualDeliveryDateTime" scpoColumnName="udc3" dataType="datetime"/>
+    		<column hostColumnName="actualQuantity" scpoColumnName="udc4" dataType="float"/>
+    		<column hostColumnName="deliveryMethodCode" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap7" scpoColumnName="udc7"/>
+    	</table>
+    	<table name="UDT_HISTTRANSACTUAL" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="actualExecutionDateTime" scpoColumnName="udc2" dataType="datetime"/>
+    		<column hostColumnName="actualDeliveryDateTime" scpoColumnName="udc3" dataType="datetime"/>
+    		<column hostColumnName="actualQuantity" scpoColumnName="udc4" dataType="float"/>
+    		<column hostColumnName="deliveryMethodCode" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap7" scpoColumnName="udc7"/>
+    	</table>
+    	<table name="UDT_HISTTRANSPLAN" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="actualExecutionDateTime" scpoColumnName="udc2" dataType="datetime"/>
+    		<column hostColumnName="actualDeliveryDateTime" scpoColumnName="udc3" dataType="datetime"/>
+    		<column hostColumnName="actualQuantity" scpoColumnName="udc4" dataType="float"/>
+    		<column hostColumnName="deliveryMethodCode" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap6" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap7" scpoColumnName="udc7"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="inventory" bi-directional="true">
+    	<!-- <table name="inventory">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="locationIdentifier" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="itemIdentifier" scpoColumnName="udc1"/>
+    		<column hostColumnName="locationIdentifier" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="itemhierarchylevelmember" bi-directional="true">
+    	<!-- <table name="dmdunit">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandUnitIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_DMDUNIT" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandUnitIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="dfuview" bi-directional="true">
+    	<!-- <table name="dfuview">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandForecastUnitIdentification/demandUnit" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+		<table name="dfutosku">
+			<column hostColumnName="demandForecastUnitIdentification/demandUnit" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/> 
+    	</table>
+    	<table name="UDT_DFUVIEW" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="demandForecastUnitIdentification/demandUnit" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> 
+    	-->	
+    </entity-map>
+    <entity-map scpoEntityName="skudmdgroupparam" bi-directional="true">
+    	<!-- <table name="skudmdgroupparam">
+    		<column hostColumnName="sap1" scpoColumnName="udc1"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc2"/>
+    	</table>
+    	<table name="skudmdgroupeffparam">
+    		<column hostColumnName="sap2" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="sap1" scpoColumnName="UDC5"/>
+    		<column hostColumnName="sap2" scpoColumnName="UDC6"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="skuhist" bi-directional="true">
+    	<!--<table name="skuhist" isOutBound="true">
+    		<column hostColumnName="sap1" scpoColumnName="UDC1"/>
+    		<column hostColumnName="sap2" scpoColumnName="UDC2"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="item" bi-directional="true">
+    	<!-- <table name="item">
+    		<column hostColumnName="description" scpoColumnName="udc1"/>
+    		<column hostColumnName="tradeDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="itemIdentification/additionalTradeItemIdentification" scpoColumnName="udc3"/>
+    	</table>
+		<table name="dmdunit">
+    		<column hostColumnName="demandUnitInformation/demandUnitDetails/description" scpoColumnName="udc1"/>
+    		<column hostColumnName="tradeDate" scpoColumnName="udc2" dataType="date"/>
+    		<column hostColumnName="demandUnitInformation/demandUnitDetails/handlingInstruction/handlingInstructionCode" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    		<column hostColumnName="sap5" scpoColumnName="udc5"/>
+    	</table>
+    	<table name="UDT_ITEM" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemIdentification/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+			<column hostColumnName="itemIdentification/additionalTradeItemIdentification" scpoColumnName="udc3" isPK="true"/>
+    	</table> -->
+    </entity-map>
+    
+    <entity-map scpoEntityName="skuhistfcst" bi-directional="true">
+    	<!-- <table name="skuhistfcst">
+    		<column hostColumnName="sap1" scpoColumnName="UDC1"/>
+    		<column hostColumnName="sap2" scpoColumnName="UDC2"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="sap1" scpoColumnName="UDC3"/>
+    		<column hostColumnName="sap2" scpoColumnName="UDC4"/>
+    	</table> -->
+    </entity-map>
+    
+    <entity-map scpoEntityName="loc" bi-directional="true">
+    	<!-- <table name="loc">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_LOC" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="movingevent" bi-directional="true">
+    	<!-- <table name="movingevent">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="eventGroupIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="movingeventdata">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="eventDate/eventDate" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_MOVINGEVENT" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="networkmap" bi-directional="true">
+    	<!-- <table name="network">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="eventGroupIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="networkcap">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="eventDate/eventDate" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="sourcing">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="eventDate/eventDate" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="sourcingrequirement">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="eventDate/eventDate" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="sourcinguomconvfactor">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="eventDate/eventDate" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_NETWORK" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="locationIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="foo" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="prepacksupply" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="allocsupplyprepack">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="prepackSupplyIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="allocsupplyprepackdetails">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="prepackSupplyIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_PREPACKSUPPLYPACK" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="prepackSupplyIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+	<entity-map scpoEntityName="purchorder" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="purchorder">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="orderIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_PURCHORDER" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="orderIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc7"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="firmplanpurch" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="planpurch">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="plannedSupplyIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="plannedSupplyDetail/scheduledOnHandDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_PLANPURCH" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="plannedSupplyIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="plannedSupplyDetail/scheduledOnHandDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc8"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="productionrouting" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="productionmethod">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="productionRoutingIdentifier/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="description" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="productionstep">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="productionRoutingIdentifier/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="productionResource/resourceIdentifier" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table> 
+    	<table name="altproductionstep">
+    		<column hostColumnName="sap2" scpoColumnName="udc1"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc2" dataType="VARCHAR2"/>
+    	</table>
+    	<table name="UDT_PROCUDTIONROUTING" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="productionRoutingIdentifier/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="productionResource/resourceIdentifier" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="promotion" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="ddeprofile">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="promotionIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="item/itemIdentifier" scpoColumnName="udc7"/>
+    		<column hostColumnName="financialInformation/vendorCost" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="dfuddemap">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="promotionIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="item/itemIdentifier" scpoColumnName="udc7"/>
+    		<column hostColumnName="financialInformation/vendorCost" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="UDT_PROMOTION" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="promotionIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="item/itemIdentifier" scpoColumnName="udc7"/>
+    		<column hostColumnName="financialInformation/vendorCost" scpoColumnName="udc8" dataType="number"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="purchmethod" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="purchmethod">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="purchaseMethodIdentifier/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="description" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_PURCHMETHOD" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="purchaseMethodIdentifier/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="productionResource/resourceIdentifier" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="resource" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="resource">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="resourceIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="cal">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="resourceIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="resourceCalendar/calendarIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="resourceCalendar/calendarStartDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    	</table>
+    	<table name="calpattern">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="resourceIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="resourceCalendar/calendarIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="resourceCalendar/calendarStartDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="name" scpoColumnName="udc7"/>
+    		<column hostColumnName="patternFrequencyCode" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc10" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc11"/>
+    	</table>
+    	<table name="calattribute">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="resourceIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="resourceCalendar/calendarIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="resourceCalendar/calendarStartDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="name" scpoColumnName="udc7"/>
+    		<column hostColumnName="patternFrequencyCode" scpoColumnName="udc8"/>
+    		<column hostColumnName="attributeType" scpoColumnName="udc9"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="resourceIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="resourceCalendar/calendarIdentification" scpoColumnName="udc3"/>
+    		<column hostColumnName="resourceCalendar/calendarStartDate" scpoColumnName="udc4" dataType="date"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="name" scpoColumnName="udc7"/>
+    		<column hostColumnName="patternFrequencyCode" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc10" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc11"/>
+    		<column hostColumnName="attributeType" scpoColumnName="udc9"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="schedrcpts" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="schedrcpts">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="scheduledReceiptIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="scheduledReceiptLineItem/supplyExpirationDate" scpoColumnName="udc7" dataType="date"/>
+    	</table>
+    	<table name="schedrcptsdetail">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="scheduledReceiptIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="scheduledReceiptLineItem/supplyExpirationDate" scpoColumnName="udc7" dataType="date"/>
+    	</table>
+    	<table name="UDT_SCHEDRCPTS" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="scheduledReceiptIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="scheduledReceiptLineItem/supplyExpirationDate" scpoColumnName="udc7" dataType="date"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="sku" bi-directional="true">
+    	<!-- <table name="sku">
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc7"/>
+    	</table>
+    	<table name="SKU_UDT" isUDT="true">
+    		<column hostColumnName="sap2" scpoColumnName="udc3"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc1" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc2"/>
+    	</table>
+    	<table name="skuioparam">
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc7"/>
+    	</table>
+    	<table name="skueffioparam">
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc7"/>
+    	</table> -->
+    	<!--<table name="skudeploymentparam">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="deploymentParameters/initialStockoutCost" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="deploymentParameters/surplusRestockCost" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="skueffinventoryparam">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="effectiveInventoryParameters/maximumOnHandQuantity" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="effectiveInventoryParameters/safetyStockCoverageDuration" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="skuplanningparam">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="planningParameters/incrementalDRPQuantity" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="planningParameters/receivingHandlingCost" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="skusafetystockparam">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="safetyStockParameters/accumulationDuration" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="safetyStockParameters/averageReplenishmentLeadDuration" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="skuperishableparam">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="perishableParameters/minimumShelfLifeDuration" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="perishableParameters/minimumShipmentShelfLifeDuration" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="skuss">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="safetyStockParameters/accumulationDuration" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="safetyStockParameters/averageReplenishmentLeadDuration" scpoColumnName="udc8" dataType="number"/>
+    	</table>
+    	<table name="UDT_SKU" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="itemLocationIdentification/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="itemLocationIdentification/location/additionalPartyIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="perishableParameters/minimumShelfLifeDuration" scpoColumnName="udc7" dataType="number"/>
+    		<column hostColumnName="perishableParameters/minimumShipmentShelfLifeDuration" scpoColumnName="udc8" dataType="number"/>
+    		<column hostColumnName="safetyStockParameters/accumulationDuration" scpoColumnName="udc9" dataType="number"/>
+    		<column hostColumnName="safetyStockParameters/averageReplenishmentLeadDuration" scpoColumnName="udc10" dataType="number"/>
+    		<column hostColumnName="planningParameters/incrementalDRPQuantity" scpoColumnName="udc11" dataType="number"/>
+    		<column hostColumnName="planningParameters/receivingHandlingCost" scpoColumnName="udc12" dataType="number"/>
+    		<column hostColumnName="effectiveInventoryParameters/maximumOnHandQuantity" scpoColumnName="udc13" dataType="number"/>
+    		<column hostColumnName="effectiveInventoryParameters/safetyStockCoverageDuration" scpoColumnName="udc14" dataType="number"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="uom" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="uom">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="purchaseMethodIdentifier/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="description" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="uomcategory">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="purchaseMethodIdentifier/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="description" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_UOM" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="purchaseMethodIdentifier/item/additionalTradeItemIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="discontinueDate" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="productionResource/resourceIdentifier" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="vehicleloadline" bi-directional="true" fail-on-missing-code="true">
+    	<!--<table name="vehicleloadline" isOutBound="true">
+    		<column hostColumnName="configid" scpoColumnName="configid"/>
+    		<column hostColumnName="grouporderid" scpoColumnName="grouporderid"/>
+    		<column hostColumnName="primaryitemqty" scpoColumnName="primaryitemqty"/>
+    	</table> 
+    	<table name="vehicleloadline">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="transportLoadIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="stop/stopLogisticEvent/logisticEventDateTime/date" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="stop/stopSequenceNumber" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table>
+    	<table name="vehicleload">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="transportLoadIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="stop/stopLogisticEvent/logisticEventDateTime/date" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="stop/stopSequenceNumber" scpoColumnName="udc8"/>
+    	</table>
+    	<table name="UDT_VEHICLELOAD" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="udc1" dataType="datetime"/>
+    		<column hostColumnName="transportLoadIdentification/entityIdentification" scpoColumnName="udc2"/>
+    		<column hostColumnName="sap1" scpoColumnName="udc5" dataType="date"/>
+    		<column hostColumnName="sap2" scpoColumnName="udc6"/>
+    		<column hostColumnName="stop/stopLogisticEvent/logisticEventDateTime/date" scpoColumnName="udc7" dataType="date"/>
+    		<column hostColumnName="stop/stopSequenceNumber" scpoColumnName="udc8"/>
+    		<column hostColumnName="sap3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="sap4" scpoColumnName="udc4"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="fcst" bi-directional="true">
+    	<!-- <table name="fcst">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="UDT_FCST" isUDT="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="fcst" isOutBound="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="skuexternalfcst">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="number"/>
+    	</table>
+    	<table name="dfutoskufcst" isOutBound="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table> -->
+    </entity-map>
+   <!--  <entity-map scpoEntityName="skuexternalfcst" bi-directional="true">
+    	  <table name="UDT_SKUEXTERNALFCST" isUDT="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+   </entity-map>  -->	
+    <entity-map scpoEntityName="planpurch" bi-directional="true">
+    	<!-- <table name="planpurch" isOutBound="true">
+    		<column hostColumnName="action" scpoColumnName="action" dataType="integer"/>
+    		<column hostColumnName="actiondate" scpoColumnName="actiondate" dataType="date"/>
+    		<column hostColumnName="ctoitem" scpoColumnName="ctoitem"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="planorder" bi-directional="true">
+    	<!-- <table name="planorder" isOutBound="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="planarriv" bi-directional="true">
+    	<!-- <table name="planarriv">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="UDT_PLANARRIV" isUDT="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="planarriv" isOutBound="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="recship" bi-directional="true">
+    	<!-- <table name="recship" isOutBound="true">
+    		<column hostColumnName="udc1" scpoColumnName="udc1"/>
+    		<column hostColumnName="udc2" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="sourcing" bi-directional="true">
+    	 <!-- <table name="sourcing">
+    		<column hostColumnName="documentStatusCode" scpoColumnName="udc1"/>
+    		<column hostColumnName="arrivalCalendar" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+		<table name="sourcingrequirement">
+    		<column hostColumnName="documentStatusCode" scpoColumnName="udc1"/>
+    		<column hostColumnName="arrivalCalendar" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+		<table name="sourcinguomconvfactor">
+    		<column hostColumnName="documentStatusCode" scpoColumnName="udc1"/>
+    		<column hostColumnName="arrivalCalendar" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table>
+    	<table name="UDT_SOURCING" isUDT="true">
+    		<column hostColumnName="shippingCalendar" scpoColumnName="udc1"/>
+    		<column hostColumnName="procurementCalendar" scpoColumnName="udc2"/>
+    		<column hostColumnName="udc3" scpoColumnName="udc3" dataType="date"/>
+    		<column hostColumnName="udc4" scpoColumnName="udc4" dataType="float"/>
+    	</table> -->
+    </entity-map>
+    <entity-map scpoEntityName="generic" bi-directional="true" fail-on-missing-code="true">
+    	<!-- <table name="aggres" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="crtDtTime" dataType="datetime"/>
+    		<column hostColumnName="itemLocationId.item.primaryId" scpoColumnName="item" isPK="true"/>
+    		<column hostColumnName="itemLocationId.location.primaryId" scpoColumnName="loc" isPK="true"/>
+    		<column hostColumnName="effectiveDate" scpoColumnName="effDt" dataType="date"/>
+    	</table>
+    	<table name="aggsku" isUDT="true">
+    		<column hostColumnName="creationDateTime" scpoColumnName="crtDtTime" dataType="datetime"/>
+    		<column hostColumnName="itemLocationId.item.primaryId" scpoColumnName="item"/>
+    		<column hostColumnName="itemLocationId.location.primaryId" scpoColumnName="loc"/>
+    		<column hostColumnName="onHandInventoryQuantity" scpoColumnName="ohqty" dataType="number"/>
+    	</table> -->
+    </entity-map>
+</entity-map-configuration>

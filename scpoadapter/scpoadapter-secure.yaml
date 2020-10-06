@@ -1,0 +1,57 @@
+mbJmsComponent:
+  queue:
+    password-secure: admin
+      
+scpo:
+  intermediateQueue:
+    password-secure: admin
+  db:
+    oracle:
+      password-secure: SCPOMGR
+      
+##########################################################
+#
+#         messagestore configuration   
+#
+##########################################################      
+  ms:
+    server:
+      requester:
+        https:
+          key:
+            password-secure: "changeme"
+          tls:
+            keyStore:
+              password-secure: "changeme"
+            trustStore:
+              password-secure: "changeme"
+    
+##########################################################
+#
+#         bulk notification configuration   
+#
+##########################################################      
+bulk:
+  callback:
+    password-secure:
+    azure:
+      container:
+        name:
+      connection:
+        string-secure:
+        
+##########################################################
+#
+#         canmodel service configuration   
+#
+##########################################################
+canmodel:
+  service:
+    https:
+      tls:
+        keystore:
+          password-secure: "changeme"
+          key:
+            password-secure: "changeme"
+        truststore:
+          password-secure: "changeme"        

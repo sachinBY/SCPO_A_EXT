@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<code-map-configuration>
+	<code-map name="UOMIsoConversion" bi-directional="true">
+		<code key="PC" value="PCE" />
+		<code key="ACR" value="acre" />
+		<code key="EA" value="ea" />
+		<code key="FTK" value="ft2" />
+		<code key="CMK" value="cm2" />
+		<code key="MTK" value="m2" />
+		<code key="DZN" value="DZ" />
+		<code key="DAY" value="Day" />
+		<code key="HUR" value="Hour" />
+		<code key="WEE" value="Week" />
+		<code key="TNU" value="Ton" />
+		<code key="23" value="Cubic Centimeter" />
+		<code key="QT" value="Quart" />
+		<code key="PT" value="Pint" />
+		<code key="PF" value="Pallet" />
+		<code key="ONZ" value="Ounce" />
+		<code key="MON" value="Month" />
+		<code key="MMT" value="Millimeter" />
+		<code key="MIN" value="Minute" />
+		<code key="SEC" value="Second" />
+		<code key="SMI" value="Mile" />
+		<code key="MTQ" value="Cubic Centimeter" />
+		<code key="MTK" value="Square Meter" />
+		<code key="MTR" value="Meter" />
+		<code key="LBR" value="Pound" />
+		<code key="LTR" value="Liter" />
+		<code key="KMT" value="Kilometer" />
+		<code key="KGM" value="Kilogram" />
+		<code key="ANN" value="Year" />
+		<code key="INQ" value="Cubic Inch" />
+		<code key="INH" value="Inch" />
+		<code key="HR" value="Hour" />
+		<code key="GLL" value="Gallon" />
+		<code key="GRM" value="Gram" />
+		<code key="FTQ" value="Cubic Foot" />
+		<code key="FOT" value="Foot" />
+		<code key="DZN" value="Dozen" />
+		<code key="CS" value="Case" />
+		<code key="CMT" value="Centimeter" />
+		<code key="CMQ" value="Cubic Centimeter" />
+		<code key="P1" value="Percent" />
+	</code-map>
+	<code-map name="UOMConversion" bi-directional="true">
+		<code key="PCE" value="10080" />
+		<code key="acre" value="1" />
+		<code key="ea" value="18" />
+		<code key="ft2" value="2" />
+		<code key="cm2" value="3" />
+		<code key="m2" value="6" />
+		<code key="DZ" value="17" />
+		<code key="Day" value="35" />
+		<code key="Hour" value="28" />
+		<code key="Week" value="38" />
+		<code key="Ton" value="58" />
+		<code key="Cubic Centimeter" value="40" />
+		<code key="Quart" value="49" />
+		<code key="Pint" value="48" />
+		<code key="Pallet" value="95" />
+		<code key="Ounce" value="57" />
+		<code key="Month" value="37" />
+		<code key="Millimeter" value="25" />
+		<code key="Minute" value="36" />
+		<code key="Second" value="96" />
+		<code key="Mile" value="24" />
+		<code key="Cubic Centimeter" value="40" />
+		<code key="Square Meter" value="6" />
+		<code key="Meter" value="23" />
+		<code key="Pound" value="50" />
+		<code key="Liter" value="47" />
+		<code key="Kilometer" value="22" />
+		<code key="Kilogram" value="53" />
+		<code key="Year" value="39" />
+		<code key="Cubic Inch" value="42" />
+		<code key="Inch" value="21" />
+		<code key="Cubic Foot" value="41" />
+		<code key="Hour" value="28" />
+		<code key="Gallon" value="46" />
+		<code key="Gram" value="52" />
+		<code key="Foot" value="27" />
+		<code key="Dozen" value="17" />
+		<code key="Case" value="10001" />
+		<code key="Centimeter" value="20" />
+		<code key="Cubic Centimeter" value="40" />
+		<code key="Percent" value="59" />
+	</code-map>
+	<code-map name="hierarchyLevelConversion" bi-directional="true">
+		<code key="1" value="Item" />
+		<code key="2" value="DMDUnit" />
+		<code key="3" value="Item" />
+		<code key="4" value="cm2" />
+		<code key="5" value="m2" />
+		<code key="6" value="DZ" />
+		<code key="7" value="Day" />
+	</code-map>
+	<code-map name="hierarchyLevels" bi-directional="true">
+		<code key="1" value="Item" />
+		<code key="2" value="DMDUNIT" />
+		<code key="3" value="Category" />
+		<code key="4" value="Subcategory" />
+	</code-map>
+	<code-map name="histStreamConversion" bi-directional="true">
+		<code key="111" value="SALES" />
+		<code key="142" value="SHIPMENT" />
+		<code key="141" value="SHIPMENTRETURNS" />
+		<code key="11" value="POSSALES" />
+		<code key="12" value="POSRETURNS" />
+		<code key="15" value="POSMARKDOWNSALES" />
+		<code key="16" value="POSMARKDOWNRETURNS" />
+		<code key="21" value="POSPROMOTIONSALES" />
+		<code key="22" value="POSPROMOTIONRETURN" />
+	</code-map>
+	<code-map name="typeCodeToLocTypeConversion" bi-directional="true">
+		<code key="MANUFACTURING_PLANT" value="2" />
+		<code key="STORE" value="6" />
+		<code key="WAREHOUSE_AND_OR_DEPOT" value="3" />
+	</code-map>
+	<code-map name="parentRoleToLocTypeConversion" bi-directional="true">
+		<code key="SUPPLIER" value="1" />
+		<code key="CUSTOMER" value="5" />
+	</code-map>
+	<code-map name="uomCategoryToSCPOTypeConversion" bi-directional="true">
+		<code key="VOLUME" value="70" />
+		<code key="WEIGHT" value="10" />
+		<code key="PERCENTAGE" value="1003" />
+		<code key="SYSTEM CATEGORY" value="-1" />
+		<code key="CARTONS" value="1001" />
+		<code key="UNIT LOAD" value="1002" />
+		<code key="ALTSHIPUNIT" value="80" />
+		<code key="TIME" value="130" />
+		<code key="LENGTH" value="30" />
+		<code key="PIECES" value="90" />
+		<code key="CURRENCY" value="110" />
+		<code key="AREA" value="50" />
+		<code key="LAYER CATEGORY" value="2004" />
+		<code key="PACK CATEGORY" value="2003" />
+	</code-map>
+	<code-map name="uomToCategoryTypeConversion" bi-directional="true">
+		<code key="20003" value="2003" />
+		<code key="20004" value="2004" />
+		<code key="0" value="-1" />
+		<code key="1" value="50" />
+		<code key="2" value="50" />
+		<code key="3" value="50" />
+		<code key="4" value="50" />
+		<code key="5" value="50" />
+		<code key="6" value="50" />
+		<code key="7" value="50" />
+		<code key="8" value="50" />
+		<code key="9" value="110" />
+		<code key="10" value="110" />
+		<code key="11" value="110" />
+		<code key="12" value="110" />
+		<code key="13" value="110" />
+		<code key="14" value="110" />
+		<code key="15" value="110" />
+		<code key="16" value="110" />
+		<code key="17" value="90" />
+		<code key="18" value="90" />
+		<code key="19" value="90" />
+		<code key="20" value="30" />
+		<code key="21" value="30" />
+		<code key="22" value="30" />
+		<code key="23" value="30" />
+		<code key="24" value="30" />
+		<code key="25" value="30" />
+		<code key="26" value="30" />
+		<code key="27" value="30" />
+		<code key="28" value="130" />
+		<code key="29" value="130" />
+		<code key="30" value="130" />
+		<code key="31" value="130" />
+		<code key="32" value="130" />
+		<code key="33" value="130" />
+		<code key="34" value="130" />
+		<code key="35" value="130" />
+		<code key="36" value="130" />
+		<code key="37" value="130" />
+		<code key="38" value="130" />
+		<code key="39" value="130" />
+		<code key="40" value="70" />
+		<code key="41" value="70" />
+		<code key="42" value="70" />
+		<code key="43" value="70" />
+		<code key="44" value="70" />
+		<code key="45" value="70" />
+		<code key="46" value="70" />
+		<code key="47" value="70" />
+		<code key="48" value="70" />
+		<code key="49" value="70" />
+		<code key="50" value="10" />
+		<code key="51" value="10" />
+		<code key="52" value="10" />
+		<code key="53" value="10" />
+		<code key="54" value="10" />
+		<code key="55" value="10" />
+		<code key="56" value="10" />
+		<code key="57" value="10" />
+		<code key="58" value="10" />
+		<code key="59" value="1003" />
+		<code key="10002" value="110" />
+		<code key="10003" value="110" />
+		<code key="10004" value="110" />
+		<code key="10006" value="110" />
+		<code key="10007" value="110" />
+		<code key="10009" value="110" />
+		<code key="10012" value="110" />
+		<code key="10014" value="110" />
+		<code key="10015" value="110" />
+		<code key="10016" value="110" />
+		<code key="10017" value="110" />
+		<code key="10018" value="110" />
+		<code key="10020" value="110" />
+		<code key="10021" value="110" />
+		<code key="10023" value="110" />
+		<code key="10028" value="110" />
+		<code key="10029" value="110" />
+		<code key="10030" value="110" />
+		<code key="10031" value="110" />
+		<code key="10032" value="110" />
+		<code key="10033" value="110" />
+		<code key="10035" value="110" />
+		<code key="10037" value="110" />
+		<code key="10039" value="110" />
+		<code key="10040" value="110" />
+		<code key="10042" value="110" />
+		<code key="10043" value="110" />
+		<code key="10044" value="110" />
+		<code key="10045" value="110" />
+		<code key="10046" value="110" />
+		<code key="10047" value="110" />
+		<code key="10048" value="110" />
+		<code key="10049" value="110" />
+		<code key="10051" value="110" />
+		<code key="10052" value="110" />
+		<code key="10053" value="110" />
+		<code key="10054" value="110" />
+		<code key="10055" value="110" />
+		<code key="10056" value="110" />
+		<code key="10057" value="110" />
+		<code key="10058" value="110" />
+		<code key="10060" value="110" />
+		<code key="10061" value="110" />
+		<code key="10063" value="110" />
+		<code key="10064" value="110" />
+		<code key="10065" value="110" />
+		<code key="10066" value="110" />
+		<code key="10067" value="110" />
+		<code key="10068" value="110" />
+		<code key="10069" value="110" />
+		<code key="10001" value="1001" />
+		<code key="95" value="1002" />
+		<code key="800" value="80" />
+		<code key="100" value="10" />
+		<code key="700" value="70" />
+	</code-map>
+	<code-map name="calendartypeCodeToSCPOTypeConversion" bi-directional="true">
+		<code key="ALLOCATION" value="7" />
+		<code key="ARRIVAL_SHIPPING" value="6" />
+		<code key="DEMAND" value="5" />
+		<code key="LEAD_TIME_EFFICIENCY" value="21" />
+		<code key="MASTER" value="4" />
+		<code key="ORDER_REVIEW" value="13" />
+		<code key="PRODUCT_MIX" value="25" />
+		<code key="PRODUCTION" value="9" />
+		<code key="PRODUCTION_CAPACITY" value="10" />
+		<code key="PRODUCTION_FAMILY" value="24" />
+		<code key="PRODUCTION_RATE_EFFICIENCY" value="17" />
+		<code key="PRODUCTION_SMOOTHING" value="20" />
+		<code key="PRICE" value="22" />
+		<code key="RECOMMENDED_SHIPMENT" value="8" />
+		<code key="REPORTING" value="3" />
+		<code key="REVIEW" value="12" />
+		<code key="STORAGE" value="14" />
+		<code key="SUPPLIER" value="23" />
+		<code key="SUPPLY_INVENTORY" value="18" />
+		<code key="TRANSPORTATION" value="11" />
+		<code key="WORKING" value="11" />
+		<code key="YIELD" value="16" />
+	</code-map>
+</code-map-configuration>
