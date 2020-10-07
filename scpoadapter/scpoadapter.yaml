@@ -282,7 +282,7 @@ gs1:
   dfutoskufcst:
     message: "forecast2"    
     out:
-      message: "gs1"
+      message: "csv"
   inventory:
     aggregation:
       categories: "AVAILABLE_FOR_SALE"    
