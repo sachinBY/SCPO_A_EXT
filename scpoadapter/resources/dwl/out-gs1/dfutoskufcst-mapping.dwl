@@ -37,4 +37,66 @@ fun concatenate(data) = data.ITEM ++ "," ++ data.SKULOC ++ "," ++ data.DMDGROUP 
 			},
 			sh#BusinessScope: {
 				sh#Scope: {
-					sh#Type: "SCHEMA_GUID
+					sh#Type: "SCHEMA_GUIDE",
+					sh#InstanceIdentifier: "GS1_JDA 2019.1.0"
+				}
+			}
+		},
+		forecast: {
+			creationDateTime: now(),
+			documentStatusCode: "ORIGINAL",
+			documentActionCode: "ADD",
+			dataStructure: {
+				dataElement: {
+					"name": "itemId",
+					"type": "xsd:string",
+					"isRequired": true,
+				},
+				dataElement: {
+					"name": "locationId",
+					"type": "xsd:string",
+					"isRequired": true,
+				},
+				dataElement: {
+					"name": "demandChannel",
+					"type": "xsd:string",
+					"isRequired": true,
+				},
+				dataElement: {
+					"name": "forecastTypeCode",
+					"type": "xsd:string",
+					"isRequired": false,
+				},
+				dataElement: {
+					"name": "forecastStartDate",
+					"type": "xsd:date",
+					"isRequired": true,
+				},
+				dataElement: {
+					"name": "durationInMinutes",
+					"type": "xsd:integer",
+					"isRequired": false,
+				},
+				dataElement: {
+					"name": "value",
+					"type": "xsd:integer",
+					"isRequired": true,
+				},
+			
+				(udcs map (udc , index) -> {
+					dataElement:({
+						"name": udc.hostColumnName,
+						"type": if(udc.dataType != null) "xsd:" ++ lower(udc.dataType) else "xsd:string",
+						"isRequired": false
+						})
+				}),
+				delimiter: ","
+			},
+			forecastInformation: {
+				(vars.convertedPayload map {
+					data: if (udcs != null and sizeOf(udcs) > 0) (concatenate($) ++ "," ++ getConfiguredUDCs($)) else concatenate($) 
+				})
+			}
+		}
+	}
+}
