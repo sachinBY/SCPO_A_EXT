@@ -19,7 +19,7 @@ api:
 ##########################################################
 mbJmsComponent:
   queue:
-    brokerURL: tcp://localhost:61616
+    brokerURL: failover:(tcp://localhost:61616)
     user: admin
     maxConnections: "5"
     concurrentConsumers: "3"
@@ -43,7 +43,7 @@ jms:
 scpo:
   intermediateQueue:
     enable: "true"
-    brokerURL: tcp://localhost:61616
+    brokerURL: failover:(tcp://localhost:61616)
     user: admin
     maxConnections: "5"
     concurrentConsumers: "3"
