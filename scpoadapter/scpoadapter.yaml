@@ -26,7 +26,7 @@ mbJmsComponent:
     initialRedeliveryDelay: "20000"
     redeliveryDelay: "20000"
     sessionCacheSize: "100"
-    maxRedelivery: "0"
+    maxRedelivery: "3"
 
 jms:
   queue:
@@ -50,7 +50,7 @@ scpo:
     initialRedeliveryDelay: "20000"
     redeliveryDelay: "20000"
     sessionCacheSize: "100"
-    maxRedelivery: "0"
+    maxRedelivery: "3"
     toLiveTable: to-live-table
     toLiveAckMode: "AUTO"
     toStagingTable: to-staging-table
