@@ -494,13 +494,13 @@ cal:
 ##########################################################
 ack:
   received:
-    enabled: "false"
+    enabled: "true"
   processed:
-    enabled: "false"
+    enabled: "true"
   error:
-    enabled: "false"
+    enabled: "true"
   sent:
-    enabled: "false"                                                  
+    enabled: "true"                                                  
     
 ##########################################################
 #
