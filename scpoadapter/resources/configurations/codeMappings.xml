@@ -43,7 +43,7 @@
 		<code key="CMQ" value="Cubic Centimeter" />
 		<code key="P1" value="Percent" />
 	</code-map>
-	<code-map name="UOMConversion" bi-directional="true">
+	<!-- <code-map name="UOMConversion" bi-directional="true">
 		<code key="PCE" value="10080" />
 		<code key="acre" value="1" />
 		<code key="ea" value="18" />
@@ -85,7 +85,7 @@
 		<code key="Centimeter" value="20" />
 		<code key="Cubic Centimeter" value="40" />
 		<code key="Percent" value="59" />
-	</code-map>
+	</code-map> -->
 	<code-map name="hierarchyLevelConversion" bi-directional="true">
 		<code key="1" value="Item" />
 		<code key="2" value="DMDUnit" />
