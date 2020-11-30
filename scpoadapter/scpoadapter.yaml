@@ -280,11 +280,9 @@ gs1:
     out:
       message: "gs1"    
   dfutoskufcst:
-    #message: "forecast2"
-    message: forecastMessage
+    message: "forecast2"
     out:
-      #message: "csv"
-      message: "gs1"
+      message: "csv"      
   inventory:
     aggregation:
       categories: "AVAILABLE_FOR_SALE"    
